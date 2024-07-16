@@ -1,0 +1,135 @@
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-top: 50px;
+}
+
+/* Making the container appearance */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+ 
+/* Making the actual time display more clearer */
+.digital-time {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.digital-time > div {
+    margin: 0 5px;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* User Setting the alarm area */
+
+.alarm-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.alarm-time label {
+    display: block;
+    width: 60px;
+    text-align: left;
+}
+
+.alarm-time input, .alarm-time select {
+    display: block;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alarm-time input {
+    width: 60px;
+}
+
+.alarm-time select {
+    width: 70px;
+}
+
+
+#alarms-list {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+
+/* Buttons */
+
+.alarm-time button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.alarm-time button:hover {
+    background-color: #0056b3;
+}
+
+.deleteBtn{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.deleteBtn:hover{
+    background-color: #0056b3;
+}
+
+
+
+
+/* Making it responsive */
+
+@media (max-width: 700px) {
+    .container {
+        padding: 10px;
+    }
+
+    .digital-time {
+        font-size: 1.5em;
+    }
+
+    .alarm-time {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .alarm-time input, .alarm-time select, .alarm-time button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--When the body of the html is loaded then call the init() -->
+  <body onload="init()">
+    <!--Contains the whole stucture of the alarm-->
+    <div class="container">
+      <!--Contains the structure of the actual time-->
+      <div class="digital-time">
+        <div id="dhr-time">00</div>
+        <div id="dmin-time">00</div>
+        <div id="dsec-time">00</div>
+        <div id="dam-pm">AM</div>
+      </div>
+      <br />
+      <!--Contains the structure for user's setting the alarm-->
+      <div class="alarm-time">
+        <label for="hr">HOUR</label>
+        <input type="number" id="hr-input" max="12" min="1" />
+        <label for="hr">MINUTE</label>
+        <input type="number" id="min-input" max="60" min="1" />
+        <label for="hr">SECOND</label>
+        <input type="number" id="sec-input" max="60" min="1" />
+        <label for="ampm">AM/PM</label>
+        <select name="zones" id="zone-ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <!--Button for  set alarm-->
+        <button id="set-btn">Set Alarm</button>
+      </div>
+      <br />
+      <br />
+      <!--Div for storing the list of alarms which will modified using DOM when the set alarm button is clicked-->
+      <div id="alarms-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
